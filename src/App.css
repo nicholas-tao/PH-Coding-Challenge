@@ -1,1 +1,8 @@
+.wrapper {
+  display: flex;
+  margin-top: 10rem;
+}
 
+.submit-buttom {
+  left: 50%;
+}

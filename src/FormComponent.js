@@ -1,3 +1,4 @@
+//TO DO: empty form leads to "success" but should display error
 import React, { Component } from "react";
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";

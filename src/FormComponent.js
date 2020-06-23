@@ -40,11 +40,11 @@ class FormComponent extends Component {
     switch (name) {
       case "firstName":
         errors.firstName =
-          value.length < 1 ? "Please enter your first name!" : "";
+          value.length === 0 ? "Please enter your first name!" : "";
         break;
       case "lastName":
         errors.lastName =
-          value.length < 1 ? "Please enter your last name!" : "";
+          value.length === 0 ? "Please enter your last name!" : "";
         break;
       case "email":
         errors.email = validEmailRegex.test(value)
@@ -52,7 +52,7 @@ class FormComponent extends Component {
           : "Please enter a valid email address!";
         break;
       case "message":
-        errors.message = value.length < 1 ? "Please enter a message!" : "";
+        errors.message = value.length === 0 ? "Please enter a message!" : "";
         break;
       default:
         break;
@@ -130,10 +130,19 @@ class FormComponent extends Component {
                 Form is {formValid ? "valid ✅" : "invalid ❌"}
               </p>
             ) : (
-              ""
+              <p className="form-status">Please fill in the form</p>
             )}
             <div className="submit">
-              <button type="submit">Submit</button>
+              <button
+                type="submit"
+                onClick={(formValid) => {
+                  if (formValid) {
+                    alert("Email Sent!");
+                  }
+                }}
+              >
+                Submit
+              </button>
             </div>
           </form>
         </div>

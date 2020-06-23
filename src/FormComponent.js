@@ -127,7 +127,7 @@ class FormComponent extends Component {
             </div>
             {this.state.errorCount !== null ? (
               <p className="form-status">
-                {this.state.formValid
+                {formValid
                   ? "Email Sent"
                   : "Pleas ensure you have entered valid input"}
               </p>

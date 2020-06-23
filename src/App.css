@@ -21,13 +21,17 @@
 }
 
 .form-comp {
-  margin-top: 15vh;
-  margin-right: -25vh;
+  margin-top: 10vh;
+  margin-right: -3vh;
 }
 img {
-  margin-top: 5vh;
-  margin-left: 6vh;
+  margin-top: 2vh;
+  margin-left: -4vh;
 }
 
 .container {
+  margin-top: 12vh;
+  height: 75vh;
+  background: white;
+  border-radius: 10px;
 }

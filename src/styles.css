@@ -26,3 +26,12 @@ h2 {
 .wrapper {
   width: 60vh;
 }
+
+button {
+  border-radius: 20px;
+  padding: 0.6rem;
+  font-size: 20px;
+  color: white;
+  width: 10rem;
+  background-color: #1fa2ff;
+}

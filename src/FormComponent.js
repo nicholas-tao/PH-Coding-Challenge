@@ -133,9 +133,7 @@ class FormComponent extends Component {
               ""
             )}
             <div className="submit">
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
+              <button type="submit">Submit</button>
             </div>
           </form>
         </div>

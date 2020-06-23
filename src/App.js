@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div class="wrapper1">
-        <div className="container">
+        <div className="container ">
           <div className="row">
             <div className="col">
               <img src={icon} className="email-icon" alt="Email Icon" />

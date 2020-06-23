@@ -1,4 +1,4 @@
-.container {
+.wrapper1 {
   position: fixed;
   min-width: 100%;
   min-height: 100%;
@@ -26,5 +26,8 @@
 }
 img {
   margin-top: 5vh;
-  margin-left: 8vh;
+  margin-left: 6vh;
+}
+
+.container {
 }

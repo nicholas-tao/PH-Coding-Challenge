@@ -1,4 +1,17 @@
-.container-fluid {
-  width: 100% !important  ;
-  height: auto;
+.container {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.form-comp {
+  margin-top: 15vh;
+  margin-right: -25vh;
+}
+img {
+  margin-top: 5vh;
+  margin-left: 8vh;
 }

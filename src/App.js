@@ -13,7 +13,7 @@ class App extends Component {
           <div className="col">
             <img src={icon} className="email-icon" alt="Email Icon" />
           </div>
-          <div className="col">
+          <div className="col form-comp">
             <FormComponent />
           </div>
         </div>

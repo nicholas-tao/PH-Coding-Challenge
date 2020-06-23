@@ -1,3 +1,26 @@
 textarea {
   width: 35%;
 }
+
+textarea.input-fields {
+  padding-top: 0.5rem;
+}
+
+.submit,
+.form-status {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input-fields {
+  border-radius: 15px;
+  padding: 1.2rem;
+}
+
+.wrapper {
+  width: 60vh;
+}

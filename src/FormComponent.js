@@ -81,7 +81,7 @@ class FormComponent extends Component {
                 onChange={this.handleChange}
                 noValidate
                 placeholder="First Name"
-                className="form-control"
+                className="form-control input-fields"
               />
               {errors.firstName.length > 0 && (
                 <span className="error">{errors.firstName}</span>
@@ -94,7 +94,7 @@ class FormComponent extends Component {
                 onChange={this.handleChange}
                 noValidate
                 placeholder="Last Name"
-                className="form-control"
+                className="form-control input-fields"
               />
               {errors.lastName.length > 0 && (
                 <span className="error">{errors.lastName}</span>
@@ -107,7 +107,7 @@ class FormComponent extends Component {
                 onChange={this.handleChange}
                 noValidate
                 placeholder="Email address"
-                className="form-control"
+                className="form-control input-fields"
               />
               {errors.email.length > 0 && (
                 <span className="error">{errors.email}</span>
@@ -119,25 +119,24 @@ class FormComponent extends Component {
                 onChange={this.handleChange}
                 noValidate
                 placeholder="Your Message"
-                className="form-control"
+                className="form-control input-fields"
               />
               {errors.message.length > 0 && (
                 <span className="error">{errors.message}</span>
               )}
-            </div>
-
-            <div className="submit">
-              <button type="submit" className="btn btn-secondary">
-                Submit
-              </button>
             </div>
             {this.state.errorCount !== null ? (
               <p className="form-status">
                 Form is {formValid ? "valid ✅" : "invalid ❌"}
               </p>
             ) : (
-              "Form not submitted"
+              ""
             )}
+            <div className="submit">
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>

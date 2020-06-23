@@ -127,22 +127,15 @@ class FormComponent extends Component {
             </div>
             {this.state.errorCount !== null ? (
               <p className="form-status">
-                Form is {formValid ? "valid ✅" : "invalid ❌"}
+                {this.state.formValid
+                  ? "Email Sent"
+                  : "Pleas ensure you have entered valid input"}
               </p>
             ) : (
               <p className="form-status">Please fill in the form</p>
             )}
             <div className="submit">
-              <button
-                type="submit"
-                onClick={(formValid) => {
-                  if (formValid) {
-                    alert("Email Sent!");
-                  }
-                }}
-              >
-                Submit
-              </button>
+              <button type="submit">Submit</button>
             </div>
           </form>
         </div>

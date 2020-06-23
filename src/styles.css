@@ -11,6 +11,10 @@ textarea.input-fields {
   text-align: center;
 }
 
+.form-status {
+  font-weight: bold;
+}
+
 .form-group {
   max-width: 500px;
 }

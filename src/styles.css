@@ -11,6 +11,10 @@ textarea.input-fields {
   text-align: center;
 }
 
+.form-group {
+  max-width: 500px;
+}
+
 h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -34,4 +38,19 @@ button {
   color: white;
   width: 10rem;
   background-color: #1fa2ff;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+button:hover {
+  background-color: #86ccfd;
+}
+
+button:active {
+  background-color: #86ccfd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

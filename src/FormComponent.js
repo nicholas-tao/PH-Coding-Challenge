@@ -1,4 +1,7 @@
-//TO DO: empty form leads to "success" but should display error
+/*TO DO:
+1. Fix validation (empty form leads to success, partifally form also leads to sucess rn)
+*/
+
 import React, { Component } from "react";
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -23,7 +26,7 @@ class FormComponent extends Component {
     super(props);
     this.state = {
       formValid: false,
-      errorCount: null,
+      errorCount: 1,
       errors: {
         firstName: "",
         lastName: "",
@@ -41,11 +44,11 @@ class FormComponent extends Component {
     switch (name) {
       case "firstName":
         errors.firstName =
-          value.length === 0 ? "Please enter your first name!" : "";
+          value.length < 1 ? "Please enter your first name!" : "";
         break;
       case "lastName":
         errors.lastName =
-          value.length === 0 ? "Please enter your last name!" : "";
+          value.length < 1 ? "Please enter your last name!" : "";
         break;
       case "email":
         errors.email = validEmailRegex.test(value)
@@ -53,7 +56,7 @@ class FormComponent extends Component {
           : "Please enter a valid email address!";
         break;
       case "message":
-        errors.message = value.length === 0 ? "Please enter a message!" : "";
+        errors.message = value.length < 1 ? "Please enter a message!" : "";
         break;
       default:
         break;
@@ -64,7 +67,13 @@ class FormComponent extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    /*
+    if (validateForm(this.state.errors)) {
+      alert("Email Sent!");
+    }
+    */
     this.setState({ formValid: validateForm(this.state.errors) });
+    console.log(this.state.formValid);
     this.setState({ errorCount: countErrors(this.state.errors) });
   };
 
@@ -128,7 +137,7 @@ class FormComponent extends Component {
             </div>
             {this.state.errorCount !== null ? (
               <p className="form-status">
-                {formValid
+                {this.state.formValid
                   ? "Email Sent"
                   : "Pleas ensure you have entered valid input"}
               </p>

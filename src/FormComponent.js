@@ -26,7 +26,7 @@ class FormComponent extends Component {
     super(props);
     this.state = {
       formValid: false,
-      errorCount: 1,
+      errorCount: 0,
       errors: {
         firstName: "",
         lastName: "",
@@ -75,6 +75,7 @@ class FormComponent extends Component {
     this.setState({ formValid: validateForm(this.state.errors) });
     console.log(this.state.formValid);
     this.setState({ errorCount: countErrors(this.state.errors) });
+    console.log(this.state.errorCount);
   };
 
   render() {

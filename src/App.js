@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 //import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import icon from "./images/icon.png";
+import icon from "./images/icon4.png";
 import FormComponent from "./FormComponent.js";
 
 class App extends Component {

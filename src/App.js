@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./assets/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import icon from "./images/icon4.png";
 import Form from "./Form.js";

@@ -3,7 +3,7 @@
 */
 
 import React from "react";
-import "./styles.css";
+import "./assets/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const initialState = {

@@ -5,80 +5,6 @@
 import React from "react";
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-/*
-const validEmailRegex = RegExp(
-  /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-);
-const validateForm = (errors) => {
-  let valid = true;
-  Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
-  return valid;
-};
-
-const countErrors = (errors) => {
-  let count = 0;
-  Object.values(errors).forEach((val) => val.length > 0 && (count = count + 1));
-  return count;
-};
-*/
-/*
-class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      formValid: false,
-      errorCount: 0,
-      errors: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        message: "",
-      },
-    };
-  }
-
-  handleChange = (event) => {
-    event.preventDefault();
-    const { name, value } = event.target;
-    let errors = this.state.errors;
-
-    switch (name) {
-      case "firstName":
-        errors.firstName =
-          value.length < 1 ? "Please enter your first name!" : "";
-        break;
-      case "lastName":
-        errors.lastName =
-          value.length < 1 ? "Please enter your last name!" : "";
-        break;
-      case "email":
-        errors.email = validEmailRegex.test(value)
-          ? ""
-          : "Please enter a valid email address!";
-        break;
-      case "message":
-        errors.message = value.length < 1 ? "Please enter a message!" : "";
-        break;
-      default:
-        break;
-    }
-
-    this.setState({ errors, [name]: value });
-  };
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-    /*
-    if (validateForm(this.state.errors)) {
-      alert("Email Sent!");
-    }
-    
-    this.setState({ formValid: validateForm(this.state.errors) });
-    console.log(this.state.formValid);
-    this.setState({ errorCount: countErrors(this.state.errors) });
-    console.log(this.state.errorCount);
-  };
-  */
 
 const initialState = {
   firstName: "",
@@ -145,12 +71,12 @@ export default class Form extends React.Component {
     const isValid = this.validate();
     if (isValid) {
       console.log(isValid);
+      this.setState(initialState);
+
       alert("Email Sent!");
       // clear form
-      this.setState(initialState);
     }
   };
-
   render() {
     return (
       <div className="wrapper">
@@ -197,13 +123,20 @@ export default class Form extends React.Component {
                 onChange={this.handleChange}
               />
             </div>
-            <span className="error">
-              The following fields are empty/invalid:{" "}
-              {this.state.firstNameError ? "First Name, " : ""}
-              {this.state.lastNameError ? "Last Name, " : ""}
-              {this.state.emailError ? "Email address, " : ""}
-              {this.state.messageError ? "Message" : ""}
-            </span>
+            {this.state.emailError ||
+            this.state.firstNameError ||
+            this.state.lastNameError ||
+            this.state.messageError ? (
+              <span className="error">
+                The following fields are empty/invalid:{" "}
+                {this.state.firstNameError ? "First Name, " : ""}
+                {this.state.lastNameError ? "Last Name, " : ""}
+                {this.state.emailError ? "Email address, " : ""}
+                {this.state.messageError ? "Message" : ""}
+              </span>
+            ) : (
+              ""
+            )}
 
             <div className="submit">
               <button type="submit">Submit</button>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import icon from "./images/icon4.png";
-import FormComponent from "./FormComponent.js";
+import Form from "./Form.js";
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
               <img src={icon} className="email-icon" alt="Email Icon" />
             </div>
             <div className="col form-comp">
-              <FormComponent />
+              <Form />
             </div>
           </div>
         </div>

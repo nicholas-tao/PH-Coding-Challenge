@@ -1,7 +1,3 @@
-/*TO DO:
-1. Fix validation (empty form leads to success, partifally form also leads to sucess rn)
-*/
-
 import React from "react";
 import "./assets/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
